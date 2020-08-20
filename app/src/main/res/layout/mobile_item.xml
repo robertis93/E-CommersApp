@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/nameView"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/back_text"
+        android:text="TextView"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/priceView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="93dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_text"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Цена"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceView"
+            tools:layout_editor_absoluteX="93dp"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/priceView"
+            android:layout_width="267dp"
+            android:layout_height="88dp"
+            android:layout_marginRight="35dp"
+            android:paddingLeft="150dp"
+            android:text="10999"
+            android:textColor="@color/grayy"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceView"
+            tools:layout_editor_absoluteX="93dp"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_text"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Количество"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceView"
+            tools:layout_editor_absoluteX="93dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/countView"
+            android:layout_width="182dp"
+            android:layout_height="88dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="100dp"
+            android:text="55"
+            android:textColor="@color/grayy"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/countView"
+            app:layout_constraintTop_toBottomOf="@+id/nameView"
+            tools:layout_editor_absoluteX="93dp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
