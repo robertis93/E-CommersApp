@@ -13,19 +13,12 @@
         <action
             android:id="@+id/action_backFragment_to_mobileDetailsFragment"
             app:destination="@id/mobileDetailsFragment" />
-        <action
-            android:id="@+id/action_backFragment_to_frontFragment"
-            app:destination="@id/frontFragment" />
     </fragment>
     <fragment
         android:id="@+id/frontFragment"
         android:name="space.robert.e_commersapp.FrontFragment"
         android:label="fragment_front"
-        tools:layout="@layout/fragment_front" >
-        <action
-            android:id="@+id/action_frontFragment_to_backFragment"
-            app:destination="@id/backFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_front" />
     <fragment
         android:id="@+id/mobileDetailsFragment"
         android:name="space.robert.e_commersapp.MobileDetailsFragment"

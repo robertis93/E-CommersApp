@@ -24,14 +24,14 @@ class MainActivity : AppCompatActivity() {
 
 
         front_button.setOnClickListener {
-           findNavController(R.id.fragment).navigate(R.id.action_backFragment_to_frontFragment)
+           findNavController(R.id.fragment).navigate(R.id.frontFragment)
                 back_button.setBackgroundColor(Color.GRAY)
                 front_button.setBackgroundColor(Color.CYAN)
             }
 
 
         back_button.setOnClickListener {
-            findNavController(R.id.fragment).navigate(R.id.action_frontFragment_to_backFragment)
+            findNavController(R.id.fragment).navigate(R.id.backFragment)
                 back_button.setBackgroundColor(Color.CYAN)
                 front_button.setBackgroundColor(Color.GRAY)
             }
