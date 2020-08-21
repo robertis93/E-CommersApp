@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.SnapHelper
@@ -34,6 +35,10 @@ class BackFragment : Fragment(R.layout.fragment_back) {
         val adapter = BackAdapter(molileList)
         recycler_back.adapter = adapter
 
+    }
+    fun onItemClick(mobile: Mobile){
+        val action = BackFragmentDirections.actionBackFragmentToMobileDetailsFragment(mobile.id)
+findNavController().navigate(action)
     }
 
 
