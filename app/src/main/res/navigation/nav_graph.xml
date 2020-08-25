@@ -26,6 +26,7 @@
         tools:layout="@layout/fragment_mobile_details" >
         <argument
             android:name="mobile_id"
-            app:argType="string" />
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 </navigation>

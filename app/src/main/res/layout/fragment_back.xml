@@ -19,12 +19,12 @@
 </TextView>
 
     <ImageButton
+        android:id="@+id/add_item_mobile"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_games_24"
 
         android:layout_marginLeft="350dp"
-        >
+        app:srcCompat="@drawable/ic_baseline_games_24">
 
     </ImageButton>
 </LinearLayout>

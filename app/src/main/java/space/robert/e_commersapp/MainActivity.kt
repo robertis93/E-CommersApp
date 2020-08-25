@@ -10,14 +10,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 import space.robert.e_commersapp.room.DataBase
 
 class MainActivity : AppCompatActivity() {
-    lateinit var repository: Repository
-    lateinit var database : DataBase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        database = Room.databaseBuilder(applicationContext, DataBase::class.java, "DataBase").allowMainThreadQueries().build()
-        repository =Repository(database)
+
         val frontFragment = FrontFragment()
         val backFragment = BackFragment()
 

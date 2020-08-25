@@ -7,8 +7,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.mobile_item.view.*
 
-class BackAdapter(val mobileList: List<Mobile>) :
+class BackAdapter(val mobileList: List<Mobile>, val listener: Listener) :
     RecyclerView.Adapter<BackAdapter.MobileViewHolder>() {
+
+    interface Listener {
+        fun onItemClick(mobile: Mobile)
+    }
     private var items = listOf<Mobile>()
 
     override fun onCreateViewHolder(parent: ViewGroup,viewType: Int): BackAdapter.MobileViewHolder {
@@ -22,6 +26,9 @@ class BackAdapter(val mobileList: List<Mobile>) :
 
     override fun onBindViewHolder(holder: MobileViewHolder, position: Int) {
         holder.bindItems(mobileList[position])
+        holder.itemView.setOnClickListener{
+            listener.onItemClick(mobileList[position])
+        }
     }
 
 
