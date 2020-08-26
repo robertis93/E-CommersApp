@@ -8,26 +8,25 @@
     android:orientation="vertical">
 
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-<TextView
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/grayy">
 
-</TextView>
 
     <ImageButton
         android:id="@+id/add_item_mobile"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
 
-        android:layout_marginLeft="350dp"
-        app:srcCompat="@drawable/ic_baseline_games_24">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
 
     </ImageButton>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_back"

@@ -16,13 +16,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/grayy">
 
         <Button
             android:id="@+id/canselMobile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="   Отменить"
+            android:text="Отменить"
+            android:background="@drawable/button_front"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"></Button>
 
@@ -32,7 +34,8 @@
             android:layout_height="wrap_content"
             android:text="Сохранить"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/button_front">
 
         </Button>
 

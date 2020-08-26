@@ -46,7 +46,7 @@ class BackFragment : Fragment(R.layout.fragment_back), BackAdapter.Listener {
     }
 
     override fun onItemClick(mobile: Mobile) {
-        Toast.makeText(context, "${mobile.name}", Toast.LENGTH_SHORT).show()
+
         val action = BackFragmentDirections.actionBackFragmentToMobileDetailsFragment(mobile.id)
         findNavController().navigate(action)
     }

@@ -7,7 +7,7 @@
 
     android:orientation="vertical"
     tools:ignore="ExtraText">
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -16,33 +16,55 @@
 
         <TextView
             android:id="@+id/nameViewBack"
-            android:layout_width="265dp"
+            android:layout_width="wrap_content"
             android:layout_height="88dp"
+            android:gravity="center_vertical"
             android:paddingLeft="20dp"
             android:text="TextView"
+            android:textColor="@color/blackText"
             android:textSize="25dp"
-            android:gravity="center_vertical"/>
+            tools:layout_editor_absoluteX="-8dp"
+            tools:layout_editor_absoluteY="0dp" />
 
         <TextView
             android:id="@+id/countViewBack"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="88dp"
-            android:paddingRight="10dp"
-            android:text="Количество"
-            android:textSize="25dp"
+            android:gravity="center_vertical"
             android:paddingLeft="70dp"
-            android:gravity="center_vertical"/>
+            android:paddingRight="10dp"
+            android:text="10"
+            android:textColor="@color/grayText"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/count_viewBack"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/count_viewBack"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+
+            android:gravity="center_vertical"
+            android:text="шт."
+
+            android:textColor="@color/grayText"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            tools:layout_editor_absoluteY="0dp" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"
-            android:layout_gravity="center_vertical"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
 
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

@@ -19,9 +19,10 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="93dp"
         android:gravity="center_vertical"
-        android:paddingLeft="20dp"/>
+        android:paddingLeft="20dp"
+        android:textColor="@color/blackText"/>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/back_text"
@@ -30,35 +31,50 @@
 
         <TextView
             android:id="@+id/price"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="88dp"
+            android:gravity="center_vertical"
             android:paddingLeft="20dp"
             android:paddingRight="40dp"
             android:text="Цена"
+            android:textColor="@color/blackText"
             android:textSize="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/priceView"
-            tools:layout_editor_absoluteX="93dp"
-            android:gravity="center_vertical"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/priceView"
-            android:layout_width="267dp"
+            android:layout_width="wrap_content"
             android:layout_height="88dp"
-            android:layout_marginRight="35dp"
-            android:paddingLeft="150dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="100dp"
             android:text="10999"
-            android:textColor="@color/grayy"
+            android:textColor="@color/grayText"
             android:textSize="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rouble_view"
             app:layout_constraintTop_toBottomOf="@+id/priceView"
-            tools:layout_editor_absoluteX="93dp"
-            android:gravity="center_vertical"/>
-    </LinearLayout>
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/rouble_view"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_gravity="right"
+            android:gravity="center_vertical"
+            android:text="руб."
+
+            android:textColor="@color/grayText"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="0dp"
+            tools:ignore="MissingConstraints"
+            android:paddingLeft="10dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/back_text"
@@ -66,32 +82,44 @@
 
         <TextView
             android:id="@+id/count"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="88dp"
+            android:gravity="center_vertical"
             android:paddingLeft="20dp"
             android:paddingRight="40dp"
             android:text="Количество"
+            android:textColor="@color/blackText"
             android:textSize="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/priceView"
-            tools:layout_editor_absoluteX="93dp"
-            android:gravity="center_vertical"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceView" />
 
         <TextView
             android:id="@+id/countView"
-            android:layout_width="182dp"
+            android:layout_width="wrap_content"
             android:layout_height="88dp"
             android:gravity="center_vertical"
-            android:paddingLeft="100dp"
+            android:paddingLeft="50dp"
             android:text="55"
-            android:textColor="@color/grayy"
+            android:textColor="@color/grayText"
             android:textSize="30dp"
             app:layout_constraintBottom_toTopOf="@+id/countView"
-            app:layout_constraintTop_toBottomOf="@+id/nameView"
-            tools:layout_editor_absoluteX="93dp" />
+            app:layout_constraintEnd_toStartOf="@+id/count_view"
+            app:layout_constraintTop_toBottomOf="@+id/nameView" />
 
-
-    </LinearLayout>
+        <TextView
+            android:id="@+id/count_view"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_gravity="right"
+            android:gravity="center_vertical"
+            android:text="шт."
+            android:textColor="@color/grayText"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="0dp"
+            android:paddingLeft="10dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>

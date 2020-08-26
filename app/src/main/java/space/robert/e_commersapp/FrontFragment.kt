@@ -33,13 +33,6 @@ import kotlinx.android.synthetic.main.fragment_front.*
             val adapter = Adapter(it)
             recycler.adapter = adapter
         })
-//        val molileList = listOf(
-//            Mobile("Apple iPod touch 5 32Gb", 8888, 5),
-//            Mobile("Samsung Galaxy S Duos S7562", 7230, 2),
-//            Mobile("Canon EOS 600D Kit", 15659, 4),
-//            Mobile("Samsung Galaxy Tab 2 10.1 P5100 16Gb", 13290, 9)
-//
-//        )
 
 
     }

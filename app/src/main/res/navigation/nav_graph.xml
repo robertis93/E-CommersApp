@@ -13,6 +13,7 @@
         <action
             android:id="@+id/action_backFragment_to_mobileDetailsFragment"
             app:destination="@id/mobileDetailsFragment" />
+        <argument android:name="nothingArgs" />
     </fragment>
     <fragment
         android:id="@+id/frontFragment"
@@ -28,5 +29,8 @@
             android:name="mobile_id"
             app:argType="string"
             app:nullable="true" />
+        <action
+            android:id="@+id/action_mobileDetailsFragment_to_backFragment"
+            app:destination="@id/backFragment" />
     </fragment>
 </navigation>
